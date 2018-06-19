@@ -46,7 +46,9 @@ class AdInterstitialAdMob extends AbstractAdInterstitial
 
     @Override
     public void loadAd() {
-        _interstitial.loadAd(new AdRequest.Builder().build());
+        _interstitial.loadAd(new AdRequest.Builder()
+        .tagForChildDirectedTreatment(true)
+        .build());
     }
 
     @Override
