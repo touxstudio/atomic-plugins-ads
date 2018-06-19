@@ -65,7 +65,9 @@ class AdBannerAdMob extends AbstractAdBanner {
 
     @Override
     public void loadAd() {
-        banner.loadAd(new AdRequest.Builder().build());
+        banner.loadAd(new AdRequest.Builder()
+                      .tagForChildDirectedTreatment(true)
+                      .build());
     }
 
     @Override
